@@ -24,7 +24,10 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ap-south-1
-
+          
+      - name: Change directory to terraform folder
+        run: cd terraform/vpc
+        
       - name: Terraform Init
         run: terraform init
 
