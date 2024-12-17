@@ -27,16 +27,16 @@ jobs:
           
       - name: Change directory to terraform folder
         run: cd terraform/vpc
-        working-directory: terraform/vpc
+        working-directory: ./terraform/vpc
         
       - name: Terraform Init
         run: terraform init
-        working-directory: terraform/vpc
+        working-directory: ./terraform/vpc
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: terraform/vpc
+        working-directory: ./terraform/vpc
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        working-directory: terraform/vpc
+        working-directory: ./terraform/vpc
